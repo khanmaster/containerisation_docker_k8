@@ -17,9 +17,10 @@ services:
     restart: always
     build: ./app
     ports:
-      - "3000:3000"
+      - "80:3000"
     links:
       - mongo
     environment: 
       - DB_HOST=mongodb://mongo:27017/posts
     #command: node app/seeds/seed.js
+# docker exec -it container:id  node seeds/seed.js
